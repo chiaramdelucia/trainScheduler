@@ -1,3 +1,4 @@
+$(document).ready (function () {
 var config = {
     apiKey: "AIzaSyAfm-Ir2GBSDxKvN6IZ9zs9pUaQCYN9svw",
     authDomain: "train-scheduler-32f77.firebaseapp.com",
@@ -65,6 +66,7 @@ connectionsRef.on("child_added", function(childSnapshot) {
 
 });
 
+});
 
 
 
