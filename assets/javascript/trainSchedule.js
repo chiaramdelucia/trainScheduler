@@ -53,13 +53,15 @@ connectionsRef.on("child_added", function(childSnapshot) {
     console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
     // Next Train
-    var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("hh:mm");
+    var nextTrain = moment().add(tMinutesTillTrain, "minutes");
     console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
+    var formatNextTrain = moment(nextTrain).format("hh:mm");
+    console.log(formatNextTrain);
 
 
 	$("tbody").append("<tr>" + "<td>" + trainName + "</td><td>" + trainDest + "</td><td>" + trainFreq 
-		+ "</td><td>" + nextTrain + "</td><td>" + tMinutesTillTrain + "</td></tr>");
+		+ "</td><td>" + formatNextTrain + "</td><td>" + tMinutesTillTrain + "</td></tr>");
 
 });
 
